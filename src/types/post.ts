@@ -7,5 +7,5 @@ interface BlogPost {
   comments: string[];
   category: string;
   tags: string[];
-  image: string;
+  image?: string;
 }
