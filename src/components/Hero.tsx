@@ -1,42 +1,23 @@
-import Head from "next/head";
-import Image from "next/image";
-import { FaBrain } from "react-icons/fa";
+import Image from 'next/image';
 
 const HeroSection = () => {
     return (
-        <div className="relative bg-gray-900">
-            <div className="absolute top-0 left-0 w-full h-full">
+        <div className="relative overflow-hidden">
+            <div className="absolute top-0 bottom-0 left-0 right-0 w-full h-full">
                 <Image
-                    src="/images/meditation.jpg"
-                    alt="Brain"
+                    src="/images/hero.jpg"
+                    alt="Hero Image"
                     layout="fill"
                     objectFit="cover"
                     quality={100}
                 />
-                <div
-                    className="absolute top-0 left-0 w-full h-full bg-black opacity-40"
-                ></div>
             </div>
-            <div className="relative container mx-auto py-24 lg:py-32 z-10">
-                <h1 className="text-white text-2xl sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
-            Witajcie w Polskim Towarzystwie Psychiatrycznym Oddziału Kujawsko-Pomorskiego!
-          </span>
-                </h1>
-                <p className="text-white text-2xl mb-6">
-                    Jesteśmy bardzo zadowoleni, że tu jesteście. Nasza społeczność skupia
-                    się na poprawie jakości życia osób dotkniętych chorobami psychicznymi,
-                    a także na edukowaniu i wspieraniu specjalistów zajmujących się tą
-                    dziedziną. Cieszymy się, że możemy działać razem na rzecz zdrowia
-                    psychicznego naszej społeczności.
-                </p>
-                <div className="flex items-center text-white">
-                    <p className="text-lg sm:text-xl md:text-2xl ">
-                        Dążymy do tego, aby każdy człowiek miał dostęp do profesjonalnej
-                        pomocy, a także dobrej i wrażliwej opieki. Chcemy, aby choroby
-                        psychiczne nie były już tematem tabu i by każdy mógł zwrócić się o
-                        pomoc, kiedy tylko jej potrzebuje.
-                    </p>
+            <div className="relative z-10 py-20 md:py-32 lg:py-48">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 className="text-4xl font-extrabold text-white tracking-tight sm:text-5xl md:text-6xl">
+                        Witaj na blogu Polskiego Towarzystwa Psychiatrycznego Oddziału Kujawsko-Pomorskiego!                     </h1>
+                    <p className="mt-4 text-xl text-white">
+                        Witaj na blogu Polskiego Towarzystwa Psychiatrycznego Oddziału Kujawsko-Pomorskiego! Nasza strona internetowa jest miejscem, w którym znajdziesz wartościowe informacje i artykuły na temat zdrowia psychicznego, terapii oraz różnych aspektów psychiatrii.                     </p>
                 </div>
             </div>
         </div>

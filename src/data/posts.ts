@@ -12,6 +12,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         category: 'Wellness',
         tags: ['self-care', 'mental health', 'personal growth'],
+        image:'/images/meditation.jpg'
     },
     {
         slug: '5-tips-for-effective-time-management',
@@ -26,6 +27,8 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         category: 'Productivity',
         tags: ['time management', 'productivity', 'goal setting'],
+        image:'/images/brain.jpg'
+
     },
     {
         slug: 'the-benefits-of-meditation',
@@ -40,6 +43,8 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         category: 'Wellness',
         tags: ['meditation', 'stress reduction', 'mindfulness'],
+        image:'/images/logo.png'
+
     },
     {
         slug: 'how-to-build-a-successful-online-business',
@@ -53,7 +58,9 @@ export const BLOG_POSTS: BlogPost[] = [
             'I have been struggling with building my online business, but these tips are really helpful.',
         ],
         category: 'Business',
-        tags: ['online business', 'entrepreneurship', 'marketing']
+        tags: ['online business', 'entrepreneurship', 'marketing'],
+        image:'/images/brain.jpg'
+
     },
     {
         slug: 'the-benefits-of-travel-for-personal-growth',
@@ -68,6 +75,8 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         category: 'Personal Growth',
         tags: ['travel', 'personal growth', 'self-improvement'],
+        image:'/images/meditation.jpg'
+
     },
     {
         slug: 'how-to-stay-motivated-during-difficult-times',
