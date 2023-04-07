@@ -1,18 +1,18 @@
-import { useRouter } from "next/router";
-import { BLOG_POSTS } from "@/data/posts";
+import {useRouter} from "next/router";
+import {BLOG_POSTS} from "@/data/posts";
 
 interface BlogPostPageProps {
     post: BlogPost;
 }
 
-const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
+const BlogPostPage: React.FC<BlogPostPageProps> = ({post}) => {
     return (
         <div className="">
             {/* Hero section with post image */}
             {post.image && (
                 <div
                     className="bg-cover bg-center"
-                    style={{ backgroundImage: `url(${post.image})`, height: "480px" }}
+                    style={{backgroundImage: `url(${post.image})`, height: "480px"}}
                 ></div>
             )}
 
@@ -41,7 +41,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
                 )}
                 <div
                     className="prose mt-8"
-                    dangerouslySetInnerHTML={{ __html: post.content }}
+                    dangerouslySetInnerHTML={{__html: post.content}}
                 ></div>
                 {post.comments.length > 0 && (
                     <div className="mt-8">
@@ -64,7 +64,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
 
 const BlogPostPageWrapper: React.FC = () => {
     const router = useRouter();
-    const { slug } = router.query;
+    const {slug} = router.query;
 
     // Find the post that matches the slug parameter
     const post = BLOG_POSTS.find((post) => post.slug === slug);
@@ -74,7 +74,7 @@ const BlogPostPageWrapper: React.FC = () => {
         return <p>Post not found</p>;
     }
 
-    return <BlogPostPage post={post} />;
+    return <BlogPostPage post={post}/>;
 };
 
 export default BlogPostPageWrapper;
