@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 interface BlogPostCardProps {
     post: BlogPost;
@@ -6,8 +8,8 @@ interface BlogPostCardProps {
 
 const defaultImage = "/images/hero.jpg"; // path to default image
 
-const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => {
-    const { title, author, publicationDate, content, comments, category, tags, image } = post;
+const BlogPostCard: React.FC<BlogPostCardProps> = ({post}) => {
+    const {title, author, publicationDate, content, comments, category, tags, image} = post;
 
     const [hover, setHover] = useState(false);
 
@@ -20,10 +22,12 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => {
             onMouseLeave={() => setHover(false)}
         >
             <div className="relative h-64">
-                <img
+                <Image
                     className="object-cover absolute inset-0 w-full h-full"
                     src={image || defaultImage}
                     alt=""
+                    width={500}
+                    height={500}
                 />
                 <div className="absolute inset-0 bg-gray-800 opacity-50"></div>
             </div>
@@ -46,9 +50,12 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => {
                         </div>
                     ))}
                 </div>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Read More
-                </button>
+                <Link href={`posts/${post?.slug}`}>
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Czytaj więcej...
+                    </button>
+
+                </Link>
             </div>
         </div>
     );
