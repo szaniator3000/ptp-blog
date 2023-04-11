@@ -23,7 +23,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
     const data: RandomImageResponse = await res.json();
     setImagePath(`/images/random/${data.imagePath}`);
   };
-  console.log(post.image);
 
   return (
     <div className="">
