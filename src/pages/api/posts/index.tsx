@@ -1,20 +1,32 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import nextConnect from 'next-connect';
+import fs from "fs";
+import path from "path";
+import { BLOG_POSTS } from "@/data/posts";
+import { NextApiRequest, NextApiResponse } from "next";
 
-const handler = nextConnect<NextApiRequest, NextApiResponse>();
-import {BLOG_POSTS} from "@/data/posts";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  // Your list of blog posts
+  const blogPosts = BLOG_POSTS;
 
-handler.get(async (req, res) => {
-    try {
-        // Fetch data from Strapi
-        const response = await fetch('https://your-strapi-url.com/api/posts');
-        const data = await response.json();
+  // List all files in the /public/images/random directory
+  const randomImagesPath = path.join(
+    process.cwd(),
+    "public",
+    "images",
+    "random"
+  );
+  const randomImages = fs.readdirSync(randomImagesPath);
 
-        // Return the data
-        res.status(200).json(data);
-    } catch (error) {
-        res.status(200).json(BLOG_POSTS);
+  // Loop through each blog post and update the image URL if necessary
+  const updatedBlogPosts = blogPosts.map((blogPost) => {
+    if (!blogPost.image) {
+      // If the blog post doesn't have its own image, generate a random one
+      const randomImage =
+        randomImages[Math.floor(Math.random() * randomImages.length)];
+      blogPost.image = `/images/random/${randomImage}`;
     }
-});
+    return blogPost;
+  });
 
-export default handler;
+  // Return the updated list of blog posts
+  res.status(200).json(updatedBlogPosts);
+}
