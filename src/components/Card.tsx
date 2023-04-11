@@ -9,7 +9,7 @@ interface BlogPostCardProps {
     post: BlogPost;
 }
 
-const defaultImage = "/images/hero.jpg"; // path to default image
+const defaultImage = "/images/meditation.jpg"; // path to default image
 
 const BlogPostCard: React.FC<BlogPostCardProps> = ({post}) => {
     const {title, author, publicationDate, content, category, tags, image} = post;

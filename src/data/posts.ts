@@ -75,6 +75,38 @@ export const BLOG_POSTS: BlogPost[] = [
         category: "Konferencje",
         tags: ["Psychiatria detencyjna", "Wojewódzki Szpital dla Nerwowo i Psychicznie Chorych", "Polskie Towarzystwo Psychiatryczne", "Świecie"],
         image: "/images/meditation.jpg"
+    },
+    {
+        slug: "zasoby-medyczne-dla-pacjentow-ukrainskojezycznych",
+        title: "Zasoby medyczne dla pacjentów ukraińskojęzycznych",
+        author: "Autor",
+        publicationDate: new Date("2023-05-17"),
+        content: "# Zasoby medyczne dla pacjentów ukraińskojęzycznych\n" +
+            "\n" +
+            "W związku z wojną na wschodniej granicy Polski i napływem uchodźców z Ukrainy, coraz większą potrzebę w leczeniu osób mówiących po ukraińsku oraz po rosyjsku stają się materiały medyczne w tych językach.\n" +
+            "\n" +
+            "## Zasoby dostępne online\n" +
+            "\n" +
+            "### 1. Medycyna Praktyczna\n" +
+            "\n" +
+            "Na stronie internetowej czasopisma 'Medycyna Praktyczna' dostępne są darmowe materiały dla lekarzy, w tym także w języku ukraińskim. Wśród nich można znaleźć artykuły dotyczące chorób, diagnostyki i leczenia.\n" +
+            "\n" +
+            "Link: [https://www.mp.pl/kurier/292414,materialy-dla-lekarzy](https://www.mp.pl/kurier/292414,materialy-dla-lekarzy)\n" +
+            "\n" +
+            "### 2. Zasoby w 4 językach\n" +
+            "\n" +
+            "Dla studentów i lekarzy, którzy mają kontakt z pacjentami mówiącymi po ukraińsku oraz po rosyjsku, zostało przygotowane specjalne opracowanie. W pliku o nazwie 'BADANIE PSYCHIATRYCZNE_form_pl-en-uk-ruv2' znajdują się informacje dotyczące badania psychiatrycznego oraz historii choroby w czterech językach: polskim, angielskim, ukraińskim i rosyjskim.\n" +
+            "\n" +
+            "Link do pliku: [https://www.dropbox.com/sh/8yceoup4jmxyvq5/AADNHQzDVbwhqNyt1mqUJoC6a?dl=0](https://www.dropbox.com/sh/8yceoup4jmxyvq5/AADNHQzDVbwhqNyt1mqUJoC6a?dl=0)\n" +
+            "\n" +
+            "## Podsumowanie\n" +
+            "\n" +
+            "Dostępność materiałów medycznych w języku ukraińskim oraz rosyjskim jest coraz bardziej potrzebna ze względu na sytuację geopolityczną na wschodzie Polski. Dzięki takim inicjatywom, jakie podjął Wojewódzki Szpital dla Nerwowo i Psychicznie Chorych im. dr J. Bednarza w Świeciu oraz Polskie Towarzystwo Psychiatryczne Oddział Kujawsko-Pomorski, pacjenci mówiący po ukraińsku i rosyjsku mają dostęp do specjalistycznych materiałów medycznych w swoim języku. To bardzo ważne, żeby osoby te otrzymały odpowiednią opiekę medyczną, a takie inicjatywy są krokiem w dobrym kierunku.\n"
+        ,
+        category: "Materiały medyczne",
+        tags: ["Ukraiński", "Rosyjski", "Medycyna Praktyczna", "Wojewódzki Szpital dla Nerwowo i Psychicznie Chorych", "Polskie Towarzystwo Psychiatryczne", "Świecie"],
+        image: "/images/medyczne-zasoby-ukrainski.jpg"
     }
+
 ];
 
