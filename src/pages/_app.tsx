@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Header";
-import HeroSection from "@/components/Hero";
 
 function App({ Component, pageProps }: AppProps) {
     return (

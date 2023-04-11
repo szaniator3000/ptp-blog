@@ -1,4 +1,5 @@
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,19 +8,19 @@ const Footer = () => {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h2 className="text-2xl font-bold">Polskie Towarzystwo Psychiatryczne</h2>
-            <p className="text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod sapien quis augue suscipit, a maximus velit aliquet. Sed bibendum auctor mi, nec sollicitudin libero congue ut.</p>
+          <h5>Oddział Kujawsko-Pomorski</h5>
           </div>
           <div className="flex items-center">
             <ul className="flex flex-col md:flex-row list-none">
               <li className="md:ml-4">
-                <a href="#" className="text-sm font-medium">
+                <Link href="/management" className="text-sm font-medium">
                   O nas
-                </a>
+                </Link>
               </li>
               <li className="md:ml-4">
-                <a href="#" className="text-sm font-medium">
+                <Link href="/contact" className="text-sm font-medium">
                   Kontakt
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className="flex ml-4 list-none">

@@ -13,6 +13,7 @@ const NavLinks: NavLink[] = [
     { name: "Członkowstwo", path: "/membership" },
     { name: "Składki członkowskie", path: "/contributions" },
     { name: "Statut", path: "/statute" },
+    { name: "Do pobrania", path: "/downloads" },
     { name: "Kontakt", path: "/contact" },
 ];
 

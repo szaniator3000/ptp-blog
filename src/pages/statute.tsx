@@ -1,4 +1,4 @@
-const Statut = () => {
+const Statute = () => {
     return (
         <div className="container">
         <h1>Statut</h1>
@@ -7,4 +7,4 @@ const Statut = () => {
     );
 
 }
-export default Statut;
+export default Statute;

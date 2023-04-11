@@ -17,7 +17,7 @@ const HeroSection = () => {
                     <h1 className="text-4xl font-extrabold text-white tracking-tight sm:text-5xl md:text-6xl">
                         Witaj na blogu Polskiego Towarzystwa Psychiatrycznego Oddziału Kujawsko-Pomorskiego!                     </h1>
                     <p className="mt-4 text-xl text-white">
-                        Witaj na blogu Polskiego Towarzystwa Psychiatrycznego Oddziału Kujawsko-Pomorskiego! Nasza strona internetowa jest miejscem, w którym znajdziesz wartościowe informacje i artykuły na temat zdrowia psychicznego, terapii oraz różnych aspektów psychiatrii.                     </p>
+                        Nasza strona internetowa jest miejscem, w którym znajdziesz wartościowe informacje i artykuły na temat zdrowia psychicznego, terapii oraz różnych aspektów psychiatrii.                     </p>
                 </div>
             </div>
         </div>

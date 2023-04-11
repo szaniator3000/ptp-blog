@@ -1,6 +1,9 @@
 import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {format} from "date-fns";
+import {pl} from "date-fns/locale";
+import {BlogPost} from "@/types/post";
 
 interface BlogPostCardProps {
     post: BlogPost;
@@ -9,14 +12,14 @@ interface BlogPostCardProps {
 const defaultImage = "/images/hero.jpg"; // path to default image
 
 const BlogPostCard: React.FC<BlogPostCardProps> = ({post}) => {
-    const {title, author, publicationDate, content, comments, category, tags, image} = post;
+    const {title, author, publicationDate, content, category, tags, image} = post;
 
     const [hover, setHover] = useState(false);
-
+    console.log(publicationDate);
     return (
         <div
             className={`bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 ${
-                hover ? "scale-105 shadow-2xl" : ""
+                hover ? "shadow-2xl" : ""
             }`}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
@@ -34,7 +37,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({post}) => {
             <div className="p-6">
                 <h2 className="text-lg font-bold mb-2">{title}</h2>
                 <p className="text-sm mb-2 text-gray-500">
-                    By {author} | {publicationDate.toDateString()}
+                    Dodane przez {author} | {format(new Date(publicationDate), "d MMMM yyyy", {locale: pl})}
                 </p>
                 <p className="text-gray-500 mb-4">{content.slice(0, 100)}...</p>
                 <div className="flex flex-wrap mb-4">

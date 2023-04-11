@@ -1,5 +1,7 @@
 import {useRouter} from "next/router";
 import {BLOG_POSTS} from "@/data/posts";
+import {BlogPost} from "@/types/post";
+import Markdown from "@/components/MarkdownRenderer";
 
 interface BlogPostPageProps {
     post: BlogPost;
@@ -40,23 +42,10 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({post}) => {
                     </div>
                 )}
                 <div
-                    className="prose mt-8"
-                    dangerouslySetInnerHTML={{__html: post.content}}
-                ></div>
-                {post.comments.length > 0 && (
-                    <div className="mt-8">
-                        <h2 className="text-lg font-medium text-gray-900">
-                            Comments ({post.comments.length})
-                        </h2>
-                        <ul className="mt-4">
-                            {post.comments.map((comment, index) => (
-                                <li key={index} className="mb-2">
-                                    {comment}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
+                    className="mt-8 space-y-4"
+                >
+                    <Markdown content={post.content}/>
+                </div>
             </div>
         </div>
     );
